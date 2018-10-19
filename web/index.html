@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="app.css">
+
+    <script src="jquery.min.js"></script>
+    <script src="mustache-3.0.0.min.js"></script>
+
+    <script src="web3-0.20.6.min.js"></script>
+
+    <script src="app.js"></script>
+
+    <title>智能储蓄罐</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="column">
+            <div>
+                <div>余额</div>
+                <div id="balance"></div>
+            </div>
+            <div>
+                当月已取
+            </div>
+            <div id="withdraw-amount">
+            </div>
+            <div>
+                <div>
+                    <label>金额</label>
+                    <input type="text" name="" id="input-amount" class="form-control" />
+                </div>
+                <div>
+                    <button id="btn-deposit" class="btn btn-primary">存</button>
+                    <button id="btn-withdraw" class="btn btn-danger hidden">取</button>
+                </div>
+            </div>
+            <div id="address-management" class="hidden">
+                <label>用户管理</label>
+                <input type="text" name="" id="managed-address" class="form-control" />
+                <button id="btn-add-user" class="btn btn-primary">添加</button>
+                <button id="btn-remove-user" class="btn btn-danger">删除</button>
+            </div>
+        </div>
+        <div class="column">
+            <div id="records">
+
+            </div>
+        </div>
+    </div>
+    <script id="records-template" type="text/template">
+        <ul class="list-group">
+            {{#.}}
+            <li class="list-group-item">
+                <span>
+                    {{time}}
+                </span>
+                <span class="{{action}}">
+                    {{amount}}
+                </span>
+            </li>
+            {{/.}}
+        </ul>
+    </script>
+</body>
+
+</html>

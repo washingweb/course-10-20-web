@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.column {
+  /* flex: 1; */
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+form {
+  /* width: 200px; */
+  /* margin: 100px; */
+}
+
+.btn {
+  width: 100%;
+}
+
+#records .deposit {
+  color: limegreen;
+  /* background: limegreen; */
+}
+
+#records .withdraw {
+  color: red;
+  /* background: red; */
+}
+
+.hidden {
+  display: none;
+}
